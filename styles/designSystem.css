@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* ! removing default style of browser */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ! root elements */
+:root {
+  --h1: 40px;
+  --h2: 32px;
+  --h3: 28px;
+  --h4: 24px;
+  --h5: 20px;
+  --h6: 16px;
+
+  --sub: 20px;
+
+  --label: 16px;
+  --ls: 5px;
+
+  --body: 14px;
+
+  /* ! Font Family */
+  --font-1: "Crimson Text", serif;
+  --font-2: "Work Sans", sans-serif;
+
+  /* ! Color And Opacity */
+  --color-dark-100: rgb(33, 37, 41);
+  --color-dark-75: rgba(33, 37, 41, 0.75);
+  --color-dark-50: rgba(33, 37, 41, 0.5);
+  --color-dark-25: rgba(33, 37, 41, 0.25);
+
+  --color-white-100: rgb(255, 255, 255);
+  --color-white-75: rgba(255, 255, 255, 0.75);
+  --color-white-50: rgba(255, 255, 255, 0.5);
+  --color-white-25: rgba(255, 255, 255, 0.25);
+
+  --color-green-100: rgb(116, 198, 157);
+  --color-green-75: rgba(116, 198, 157, 0.75);
+  --color-green-50: rgba(116, 198, 157, 0.5);
+  --color-green-25: rgba(116, 198, 157, 0.25);
+}
+/* 
+! Style rules for common buttons
+*/
+.dark-btn,
+.white-btn {
+  color: var(--color-white-100);
+  background-color: var(--color-dark-100);
+  cursor: pointer;
+  border: none;
+  font-size: var(--h5);
+  font-family: var(--font-2);
+  border-radius: 8px;
+  padding: 10px 40px;
+}
+.white-btn {
+  color: var(--color-dark-100);
+  background-color: var(--color-white-100);
+}
+
+/* 
+! Style rules for text colors
+*/
+
+.text-white {
+  color: var(--color-white-100);
+}
+
+.text-dark {
+  color: var(--color-dark-100);
+}
+
+.text-green {
+  color: var(--color-green-100);
+}
+/* 
+! Style rules for label
+*/
+.label {
+  font-family: var(--font-2);
+  font-size: var(--label);
+  letter-spacing: var(--ls);
+  text-transform: uppercase;
+  font-weight: 700;
+}
