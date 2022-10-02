@@ -43,6 +43,8 @@
   --color-green-75: rgba(116, 198, 157, 0.75);
   --color-green-50: rgba(116, 198, 157, 0.5);
   --color-green-25: rgba(116, 198, 157, 0.25);
+
+  --shadow-1: 3px 4px 12px 1px rgba(0, 0, 0, 0.25);
 }
 /* 
 ! Style rules for common buttons
@@ -89,7 +91,7 @@
   font-weight: 700;
 }
 /* 
-! Style rules for hero
+! Style rules for hero 
 */
 .hero {
   background-color: var(--color-green-100);
@@ -143,13 +145,66 @@
 /* 
 ! Style rules for classes common
 */
+.text-center {
+  text-align: center;
+}
 .container {
   max-width: 1120px;
   margin: auto;
 }
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  gap: 20px;
+}
+.common--title {
+  text-transform: capitalize;
+  font-size: var(--h1);
+  font-family: var(--font-1);
+  font-weight: bold;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/*
+! Style rules for footer section
+  */
+.footerWrapper {
+  background-color: var(--color-green-100);
+}
 
+.footerLinks {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.footerLinks__socials {
+  display: flex;
+  gap: 10px;
+}
+
+.footerLinks__copyright {
+  font-size: var(--sub);
+  font-family: var(--font-2);
+}
+
+/*
+! Style rules for Media queries
+  */
 /* for Desktop */
 @media (max-width: 1200px) {
+  .common--title {
+    font-size: var(--h5);
+  }
   .container {
     max-width: 970px;
   }
@@ -162,6 +217,9 @@
 }
 /* for Tablet */
 @media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
   .container {
     max-width: 500px;
   }
@@ -192,6 +250,11 @@
   }
   .hidden {
     visibility: hidden;
+  }
+  .footerLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 }
 
